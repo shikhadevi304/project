@@ -1,0 +1,23 @@
+
+<h2>Cancel your Tickets</h2>
+	<div class="confirm-container">
+		<div class="ticket-cancellation-container">
+			<input type="text" ng-model="cancelId"/>
+			<button ng-click="getDetails()" class="button-color btn btn-primary">Cancel</button>
+			
+		</div>
+		<div ng-show="showCancellation" class="ng-hide"  class="cancellation-control">
+			<p ng-bind="orderId"></p>
+			<p ng-bind="movieName"></p>
+			<p ng-bind="theatreName"></p>
+			<p ng-bind="showTime"></p>
+			<p ng-bind="numberOfTickets"></p>
+			<p ng-bind="totalAmount"></p>
+		</div>
+		<button ng-show="confirmCancellation" class="ng-hide button-color btn btn-primary" ng-click="cancel()"  >Confirm Cancel</button>
+		<div >
+		<p ng-show="showCancelledSuccessfulMessage" class="ng-hide" class="cancel-message">Your Cancellation request is successful, your money will be refunded in 5 working days</p>
+
+		<p ng-show="showCancelledFailureMessage" class="ng-hide" class="cancel-message">Your Cancellation ID seems to be wrong </p>
+		</div>
+	</div>
